@@ -12,8 +12,7 @@ unsigned int faStr1(const char* str) {
                 validWordsCount += !containsDigits;
                 isInsideWord = false;
             }
-        }
-        else {
+        } else {
             if (!isInsideWord) {
                 isInsideWord = true;
                 containsDigits = false;
@@ -42,17 +41,14 @@ unsigned int faStr2(const char* str) {
                 isInsideWord = true;
                 isValidWord = (c >= 'A' && c <= 'Z');
                 isFirstLetter = false;
-            }
-            else {
+            } else {
                 if (isFirstLetter) {
                     isFirstLetter = false;
-                }
-                else {
+                } else {
                     isValidWord &= (c >= 'a' && c <= 'z');
                 }
             }
-        }
-        else {
+        } else {
             if (isInsideWord) {
                 properCaseCount += isValidWord;
                 isInsideWord = false;
@@ -82,8 +78,7 @@ unsigned int faStr3(const char* str) {
                 totalLength += currentLength;
                 isInsideWord = false;
             }
-        }
-        else {
+        } else {
             if (!isInsideWord) {
                 isInsideWord = true;
                 currentLength = 0;
